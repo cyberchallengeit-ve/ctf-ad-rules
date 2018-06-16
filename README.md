@@ -80,7 +80,7 @@ for service in services:
 For each team, the scoreboard will list the offense, defense and SLA points of each service and the total score. Additionally, the number of conquered and lost flags will be displayed. The status of each service will also be included in the scoreboard along with the timestamp of the last check performed by the bots. The possible status values are:
 
 * _up_: service is online and behaves as expected
-* _corrupt_: service could be offline or broken, eventually as a result of a wrong patch that compromised the intended functionalities of the service
+* _corrupt_: service could be offline or broken, eventually as a result of a wrong patch that compromised the intended functionalities of the service or the checker could not confirm the presence of a valid flag
 * _not checked_: the checker running on the gameserver has not yet verified the status of the service
 
 Since there are countless ways to break a service, the scoreboard will not provide additional information if a service is marked as corrupt. Try to restore the service from your backup (please do it before applying patches) and check if the service is marked as `up` again in a few minutes.
@@ -106,6 +106,8 @@ stolen_flag = 'QWERTYUIOPASDFGHJKLZXCVBNM01234='
  
 r = requests.post(url, data={'team_token': team_token, 'flag': stolen_flag}
 ```
+
+Flags are considered expired after 5 rounds. It means that teams have up to 10 minutes to steal a flag and submit it. At the same time, the check bot will try to retrieve one of the last 5 flags from a service to check if the intended functionalities have been preserved and mark it as _up_.
 
 
 Technical and Human Behaviour
