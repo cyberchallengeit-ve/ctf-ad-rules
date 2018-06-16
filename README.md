@@ -110,7 +110,7 @@ We'd like everyone to enjoy a fair game. For this reason we ask you to follow th
 * Network vulnerability scanners - with the exception of `nmap` - are not allowed, do something better
 * Sharing flags, exploits or hints between teams is severely prohibited and will grant you the exclusion from the competition.
 
-Before attempting to break one of the aforementioned rules, remember that all the network traffic is logged.
+Before attempting to break one of the aforementioned rules, remember that all the network traffic is logged. Violations to these rules will be evaluated by the organisers who reserve the right to penalize or exclude teams and individual from the competition.
 
 
 Communication
