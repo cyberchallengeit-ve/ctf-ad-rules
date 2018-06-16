@@ -77,11 +77,14 @@ for service in services:
     total += offense[service] + defense[service] + sla[service]
 ```
 
-For each team, the scoreboard will list the offense, defense and SLA points of each service and the total score. Additionally, the number of conquered and lost flags will be displayed. The status of each service will also be included in the scoreboard. The possible status values are:
+For each team, the scoreboard will list the offense, defense and SLA points of each service and the total score. Additionally, the number of conquered and lost flags will be displayed. The status of each service will also be included in the scoreboard along with the timestamp of the last check performed by the bots. The possible status values are:
 
 * _up_: service is online and behaves as expected
-* _corrupt_: service could be offline or broken, eventually after a wrong patch that compromised the intended functionalities of the service
+* _corrupt_: service could be offline or broken, eventually as a result of a wrong patch that compromised the intended functionalities of the service
 * _not checked_: the checker running on the gameserver has not yet verified the status of the service
+
+Since there are countless ways to break a service, the scoreboard will not provide additional information if a service is marked as corrupt. Try to restore the service from your backup (please do it before applying patches) and check if the service is marked as `up` again in a few minutes.
+
 
 Flags
 -----
