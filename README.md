@@ -21,6 +21,8 @@ Talks
 -----
 Following the experience of the European Cyber Security Challenge 2017 (ECSC17), the CyberChallenge.IT committee decided to recognize the importance of soft-skills by evaluating short talks as part of the score achieved by each team. Teams are required to provide a short presentation of 10 minutes focusing on one of the services exploited during the CTF. Presentations will be provided in Italian and evaluated by a jury in terms of clarity, correctness and - most importantly - ability of presenting the problem to a non-technical audience.
 
+All the slides that will be used on stage by participants must be submitted in PDF format to the organisers before the start of the session at 5:15pm.
+
 
 Network and Setup
 -----------------
