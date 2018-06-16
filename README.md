@@ -28,7 +28,7 @@ The game is played within the `10.10.0.0/16` subnet. Each team has its own vulne
 
 The _manager_ machine is responsible for dispatching flags to the vulnerable machines, checking services integrity, hosting the scoreboard and updating scores. Participants are asked to attack vulnerable machines of other teams to retrieve proofs of successful exploitation (flags). Flags must be submitted to the flag submission service hosted by the organisers to score points. At the same time, teams must defend the vulnerable services installed on their VMs. Teams can do whatever they want within their network segment.
 
-Internet access is granted to install new software on the VM and on the laptops of participants, if needed. Due to environmental constraints (remember that the competition will take place inside a museum!) the bandwidth will be limited: try to get your laptop ready with most tools already installed and avoid wasting time during the game to download large amount of data. For the same reason, orgnanisers discourage interaction between CTF network and remote servers (e.g., starting attacks from Google cloud): large computational resources are not required to succeed at the competition.
+Internet access is granted to install new software on the VM and on the laptops of participants, if needed. Due to environmental constraints (remember that the competition will take place inside a museum!) the bandwidth will be limited: try to get your laptop ready with most tools already installed and avoid wasting time during the game to download large amount of data. For the same reason, organisers discourage interaction between CTF network and remote servers (e.g., starting attacks from Google cloud): large computational resources are not required to succeed at the competition.
 
 Beware that if you mess up your vulnerable machine, all we can do is reset it to its original state (backup your exploits, tools and patches!).
 
@@ -77,6 +77,11 @@ for service in services:
     total += offense[service] + defense[service] + sla[service]
 ```
 
+For each team, the scoreboard will list the offense, defense and SLA points of each service and the total score. Additionally, the number of conquered and lost flags will be displayed. The status of each service will also be included in the scoreboard. The possible status values are:
+
+* _up_: service is online and behaves as expected
+* _corrupt_: service could be offline or broken, eventually after a wrong patch that compromised the intended functionalities of the service
+* _not checked_: the checker running on the gameserver has not yet verified the status of the service
 
 Flags
 -----
@@ -107,7 +112,7 @@ We'd like everyone to enjoy a fair game. For this reason we ask you to follow th
 * No attacks against the infrastructure (this website and challenges) including denial-of-service (DoS), floods, DNS poisoning, ARP spoofing, MITM, etc...
 * The only permitted attack targets are the vulnerable machines! Players are not allowed to attack each other (e.g., you can't break into rivals' laptops)
 * Destructive behavior and unfair practices are severely prohibited. These include removing flags or deleting files on compromised hosts, creating fake flags to break legitimate attacks
-* Network vulnerability scanners - with the exception of `nmap` - are not allowed, do something better
+* Network vulnerability scanners - with the exception of a few manual runs of `nmap` - are not allowed, do something better
 * Sharing flags, exploits or hints between teams is severely prohibited and will grant you the exclusion from the competition.
 
 Before attempting to break one of the aforementioned rules, remember that all the network traffic is logged. Violations to these rules will be evaluated by the organisers who reserve the right to penalize or exclude teams and individual from the competition.
