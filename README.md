@@ -12,7 +12,7 @@ Schedule
 The contest will take place on Jun 27 from 9:00am to 7:30pm (Italian local time) with the actual CTF competition expected to last for 8 hours. A detailed schedule is provided below:
 
 * 9:00am - 10:00am: access to the VMs is granted, but the network is closed. Teams should use this time to analyse services before everyone can attack each other
-* 10:00am - 5:00pm: the netowork is open! Flags are dispatched to each service by the gameserver and teams can earn points by submitting proofs of successful exploitation (flags)
+* 10:00am - 5:00pm: the network is open! Flags are dispatched to each service by the gameserver and teams can earn points by submitting proofs of successful exploitation (flags)
 * 5:15pm - 6:30pm: 10-minute talks by each team
 * 6:30pm - 7:30pm: jury evaluation
 
@@ -66,7 +66,7 @@ for flag in flags_owned_by[team]:
 ### SLA
 
 ```Python
-sla = (count(ticks_with_status['up'] + 0.5 * ticks_with_status['recovering'])) * sqrt(count(teams))
+sla = count(ticks_with_status['up']) * sqrt(count(teams))
 ```
 
 ### Total Score
@@ -80,9 +80,11 @@ for service in services:
 
 Flags
 -----
-A flag is a string made up of 31 uppercase alfanumeric chars, followed by `=`. Each flag is matched by the regular expression `[A-Z0-9]{31}=`. 
+A flag is a string made up of 31 uppercase alphanumeric chars, followed by `=`. Each flag is matched by the regular expression `[A-Z0-9]{31}=`. 
 
-To manually submit a flag, click on the _flag submission service_ option in the top-right menu of the CTF portal after logging-in and enter the flag in the input form. During the CTF, anyway, you may want to automatically submit flags. To do so, you can submit stolen flags by performing an HTTP POST request to the gameserver at `10.20.0.1`. The request must contain the keys `flag` and `team_token`, where the value of the first entry is the stolen flag and `team_token`is a string that allows the server to identify your team. The token of your team can be found in your _team page_ on the CTF portal. **Important: do not perform user authentication whilst submitting flags, this is not needed and may overload our servers**.
+To manually submit a flag, click on the _flag submission service_ option in the top-right menu of the CTF portal after logging-in and enter the flag in the input form. During the CTF, anyway, you may want to automatically submit flags. To do so, you can submit stolen flags by performing an HTTP POST request to the gameserver at `10.20.0.1`. The request must contain the keys `flag` and `team_token`, where the value of the first entry is the stolen flag and `team_token`is a string that allows the server to identify your team. The token of your team can be found in your _team page_ on the CTF portal.
+
+**Important: do not perform user authentication while submitting flags, this is not needed and may overload our servers**.
 
 As an example, we provide a simple python snippet that accounts for the submission of an hardcoded flag.
 
@@ -102,7 +104,7 @@ Technical and Human Behaviour
 -----------------------------
 We'd like everyone to enjoy a fair game. For this reason we ask you to follow these simple rules:
 
-* No attacks against the infrastructure (this website and challenges) including denial-of-service (DOS), floods, DNS poisoning, ARP spoofing, MITM, etc...</li>
+* No attacks against the infrastructure (this website and challenges) including denial-of-service (DoS), floods, DNS poisoning, ARP spoofing, MITM, etc...
 * The only permitted attack targets are the vulnerable machines! Players are not allowed to attack each other (e.g., you can't break into rivals' laptops)
 * Destructive behavior and unfair practices are severely prohibited. These include removing flags or deleting files on compromised hosts, creating fake flags to break legitimate attacks
 * Network vulnerability scanners - with the exception of `nmap` - are not allowed, do something better
@@ -113,7 +115,7 @@ Before attempting to break one of the aforementioned rules, remember that all th
 
 Communication
 -------------
-We invite everyone attending the contest to join us on slack. The invitation link to the organization will be provided in your profile page! Challenge hints, if any, will be announced there.
+Communication between teams and organisers will be mostly handled on-site. If teams need to share a proof-of-concept with the organisers, [slack](https://cyberchallengeit-ctf.slack.com/) is the preferred method. Official announcements will be published before and during the competition on the [c00kies@venice twitter account](https://twitter.com/c00kiesATvenice).
 
 
 Credits
