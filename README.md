@@ -109,6 +109,8 @@ r = requests.post(url, data={'team_token': team_token, 'flag': stolen_flag}
 
 Flags are considered expired after 5 rounds. It means that teams have up to 10 minutes to steal a flag and submit it. At the same time, the check bot will try to retrieve one of the last 5 flags from a service to check if the intended functionalities have been preserved and mark it as _up_.
 
+Some (but not all) services come with flag IDs. Flag IDs are identifiers that help you access the flags that are still valid (like usernames or database IDs), without having to search through all of them. Given a service, the current set of IDs will be provided in JSON format at `https://10.20.0.1/api/flag_id/service`.
+
 
 Technical and Human Behaviour
 -----------------------------
