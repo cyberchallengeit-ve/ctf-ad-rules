@@ -92,7 +92,7 @@ Flags
 -----
 A flag is a string made up of 31 uppercase alphanumeric chars, followed by `=`. Each flag is matched by the regular expression `[A-Z0-9]{31}=`. 
 
-To manually submit a flag, click on the _flag submission service_ option in the top-right menu of the CTF portal after logging-in and enter the flag in the input form. During the CTF, anyway, you may want to automatically submit flags. To do so, you can submit stolen flags by performing an HTTP POST request to the gameserver at `10.20.0.1`. The request must contain the keys `flag` and `team_token`, where the value of the first entry is the stolen flag and `team_token`is a string that allows the server to identify your team. The token of your team can be found in your _team page_ on the CTF portal.
+To manually submit a flag, click on the _flag submission service_ option in the top-right menu of the CTF portal after logging-in and enter the flag in the input form. During the CTF, anyway, you may want to automatically submit flags. To do so, you can submit stolen flags by performing an HTTP POST request to the gameserver at `10.20.0.1`. The request must contain the keys `flag` and `team_token`, where the value of the first entry is the stolen flag and `team_token` is a string that allows the server to identify your team. The token of your team can be found in your _team page_ on the CTF portal.
 
 **Important: do not perform user authentication while submitting flags, this is not needed and may overload our servers**.
 
