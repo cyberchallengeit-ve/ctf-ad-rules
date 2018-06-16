@@ -26,7 +26,7 @@ All the slides that will be used on stage by participants must be submitted in P
 
 Network and Setup
 -----------------
-The game is played within the `10.10.0.0/16` subnet. Each team has its own vulnerable machine located at `10.10.<team_id>.1`, while players connecting to the game network are assigned an ip in the range `10.10.<team_id>.150` - `10.10.<team_id>.200`. VMs can also be reached via the DNS name `team<team_id>`. A graphical representation of the network scheme will be added soon to the rules.
+The game is played within the `10.10.0.0/16` subnet. Each team has its own vulnerable machine located at `10.10.<team_id>.1`, while players connecting to the game network are assigned an ip in the range `10.10.<team_id>.150` - `10.10.<team_id>.200`. VMs can also be reached via the DNS name `team<team_id>`. All vulnerable VMs will be hosted by organisers and will have enough resources in terms of CPU and memory to run the pre-installed services (expect a standard Linux distro with around 6 cores / 6GB ram / 30GB hd). A graphical representation of the network scheme will be added soon to the rules.
 
 The _manager_ machine is responsible for dispatching flags to the vulnerable machines, checking services integrity, hosting the scoreboard and updating scores. Participants are asked to attack vulnerable machines of other teams to retrieve proofs of successful exploitation (flags). Flags must be submitted to the flag submission service hosted by the organisers to score points. At the same time, teams must defend the vulnerable services installed on their VMs. Teams can do whatever they want within their network segment.
 
