@@ -125,7 +125,7 @@ Technical and Human Behaviour
 -----------------------------
 We'd like everyone to enjoy a fair game. For this reason we ask you to follow these simple rules:
 
-* No attacks against the infrastructure (this website and challenges) including denial-of-service (DoS), floods, DNS poisoning, ARP spoofing, MITM, etc...
+* No attacks against the infrastructure including denial-of-service (DoS), floods, DNS poisoning, ARP spoofing, MITM, etc...
 * The only permitted attack targets are the vulnerable machines! Players are not allowed to attack each other (e.g., you can't break into rivals' laptops)
 * Destructive behavior and unfair practices are severely prohibited. These include removing flags or deleting files on compromised hosts, creating fake flags to break legitimate attacks
 * Network vulnerability scanners - with the exception of a few manual runs of `nmap` - are not allowed, do something better
