@@ -90,6 +90,11 @@ For each team, the scoreboard will list the offense, defense and SLA points of e
 Since there are countless ways to break a service, the scoreboard will not provide additional information if a service is marked as corrupt. Try to restore the service from your backup (please do it before applying patches) and check if the service is marked as `up` again in a few minutes.
 
 
+### Talks and Final Score
+
+Talks will contribute up to 10% of the total score of the top team. To exemplify, let's assume that _team1_ ends up with a total score of 980 points, while _team2_ is the highest ranked among the participants with 1000 points. The mean score decided by jury after the talk of _team1_ is 8, while it is only 5 for _team2_. The final scores of _team1_ and _team2_ are, respectively, `980 + (1000/100) * 8 = 1060` and `1000 + (1000/100) * 5 = 1050`, thus allowing _team1_ to surpass _team2_ on the final scoreboard.
+
+
 Flags
 -----
 A flag is a string made up of 31 uppercase alphanumeric chars, followed by `=`. Each flag is matched by the regular expression `[A-Z0-9]{31}=`. 
