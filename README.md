@@ -4,7 +4,7 @@ The CCIT CTF Finals '18 is a security competition for students who attended the 
 
 Access to the competition is granted to the 8 teams of universities involved in the CyberChallenge.IT project. Every team is composed by 4 selected participants of each local CCIT CTF that took place on Jun 7. Teams are required to declare a captain among them who will be in charge of handling the communication between her/his team and the organisers.
 
-The rules listed on this page may change as more issues are raised by the participants. Also, the organizers keep the right to change them at any time. Keep in mind that it is not possible/feasible to list all the rules and the exceptions to rules that apply to the CTF competition. When in doubt, use common sense or ask. Lastly, the aim of the CTF is not to determine the best team in terms of technological supremacy. The goal is to share experience and knowledge in the computer security and also to have some fun together.
+The rules listed on this page may change as more issues are raised by the participants. Also, the organisers keep the right to change them at any time. Keep in mind that it is not possible/feasible to list all the rules and the exceptions to rules that apply to the CTF competition. When in doubt, use common sense or ask. Lastly, the aim of the CTF is not to determine the best team in terms of technological supremacy. The goal is to share experience and knowledge in the computer security and also to have some fun together.
 
 
 Schedule
@@ -26,9 +26,11 @@ All the slides that will be used on stage by participants must be submitted in P
 
 Network and Setup
 -----------------
-The game is played within the `10.10.0.0/16` subnet. Each team has its own vulnerable machine located at `10.10.<team_id>.1`, while players connecting to the game network are assigned an ip in the range `10.10.<team_id>.150` - `10.10.<team_id>.200`. VMs can also be reached via the DNS name `team<team_id>`. All vulnerable VMs will be hosted by organisers and will have enough resources in terms of CPU and memory to run the pre-installed services (expect a standard Linux distro with around 6 cores / 6GB ram / 30GB hd). A graphical representation of the network scheme will be added soon to the rules.
+The game is played within the `10.10.0.0/16` subnet. Each team has its own vulnerable machine located at `10.10.<team_id>.1`, while players connecting to the game network are assigned an ip in the range `10.10.<team_id>.150` - `10.10.<team_id>.200`. VMs can also be reached via the DNS name `team<team_id>`. All vulnerable VMs will be hosted by organisers and will have enough resources in terms of CPU and memory to run the pre-installed services (expect a standard Linux distro with around 6 cores / 6GB ram / 30GB hd). 
 
-The _manager_ machine is responsible for dispatching flags to the vulnerable machines, checking services integrity, hosting the scoreboard and updating scores. Participants are asked to attack vulnerable machines of other teams to retrieve proofs of successful exploitation (flags). Flags must be submitted to the flag submission service hosted by the organisers to score points. At the same time, teams must defend the vulnerable services installed on their VMs. Teams can do whatever they want within their network segment.
+![Network Map](images/netowrk-map.png)
+
+The _gameserver_ is responsible for dispatching flags to the vulnerable machines, checking services integrity, hosting the scoreboard and updating scores. Participants are asked to attack vulnerable machines of other teams to retrieve proofs of successful exploitation (flags). Flags must be submitted to the flag submission service hosted by the organisers to score points. At the same time, teams must defend the vulnerable services installed on their VMs. Teams can do whatever they want within their network segment.
 
 Internet access is granted to install new software on the VM and on the laptops of participants, if needed. Due to environmental constraints (remember that the competition will take place inside a museum!) the bandwidth will be limited: try to get your laptop ready with most tools already installed and avoid wasting time during the game to download large amount of data. For the same reason, organisers discourage interaction between CTF network and remote servers (e.g., starting attacks from Google cloud): large computational resources are not required to succeed at the competition.
 
@@ -134,7 +136,7 @@ Communication between teams and organisers will be mostly handled on-site. If te
 
 Credits
 -------
-This year the CTF is organized by the [c00kies@venice](https://secgroup.github.io) hacking team under the direction of the [CyberChallenge.IT](https://cyberchallenge.it) committee.
+This year the CTF is organised by the [c00kies@venice](https://secgroup.github.io) hacking team under the direction of the [CyberChallenge.IT](https://cyberchallenge.it) committee.
 
 Organisers would like to thank [RuCTFe](https://ructfe.org/rules/) and [FAUST CTF](https://2018.faustctf.net) for inspiring part of these rules.
 
